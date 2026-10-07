@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Pasco | Inicio y Experiencia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="magic-bg">
+        <div class="pasco-hero-overlay"></div>
+        <div class="magic-orb orb-gold"></div>
+        <div class="magic-orb orb-copper"></div>
+    </div>
+
+    <div class="top-pasco-bar">
+        <i class="fas fa-mountain"></i> <strong>TechNova Cerro de Pasco</strong> • Más de 10 años serviciondo a la Capital Minera (4,338 msnm)
+    </div>
+
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-gem logo-icon"></i>
+                <span class="logo-title">TechNova <span class="copper-text">Pasco</span></span>
+            </a>
+            
+            <nav class="navbar" id="navbar">
+                <a href="index.html" class="nav-link active">Inicio / Nosotros</a>
+                <a href="celulares.html" class="nav-link">Celulares </a>
+                <a href="repuestos.html" class="nav-link">Repuestos </a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- HERO CON IDENTIDAD DE CERRO DE PASCO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="magic-badge"><i class="fas fa-snowflake"></i> Envíos Inmediatos en Chaupimarca, Yanacancha y Simón Bolívar</div>
+            <h1 class="hero-title">TECNOLOGÍA Y SERVICIO EN LA <span class="gradient-copper">CAPITAL MINERA</span></h1>
+            <p class="hero-sub">Más de una década brindando soporte técnico especialista y venta de equipos probados para resistir el clima extremo de Pasco.</p>
+            <div class="hero-buttons">
+                <a href="celulares.html" class="btn btn-primary">Ver Catálogo Celulares <i class="fas fa-mobile-screen"></i></a>
+                <a href="repuestos.html" class="btn btn-glass">Taller de Repuestos <i class="fas fa-screwdriver-wrench"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="services">
+        <div class="section-header">
+            <span class="gold-tag">NUESTRA TRAYECTORIA</span>
+            <h2>Servicio de Altura en Cerro de Pasco</h2>
+            <div class="sparkle-divider"></div>
+        </div>
+
+        <div class="about-container">
+            <div class="glass-card">
+                <i class="fas fa-history icon-box"></i>
+                <h3>+10 Años en Pasco</h3>
+                <p>Nacimos en Chaupimarca respondiendo a las necesidades tecnológicas de estudiantes, trabajadores mineros y empresas.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fas fa-users-gear icon-box"></i>
+                <h3>+15,000 Clientes</h3>
+                <p>Atención personalizada con envíos el mismo día a Chaupimarca, Yanacancha, San Juan y distritos aledaños.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fas fa-shield-halved icon-box"></i>
+                <h3>Garantía Local</h3>
+                <p>Soporte técnico directo y garantía real de 12 meses sin tener que enviar tu equipo fuera de la provincia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section class="contact">
+        <div class="contact-card-box">
+            <div class="contact-header">
+                <h2>ATENCIÓN DIRECTA EN <span class="gradient-copper">CERRO DE PASCO</span></h2>
+                <p>Déjanos tu mensaje y un asesor te responderá inmediatamente por WhatsApp.</p>
+            </div>
+
+            <form id="contact-form" class="magic-form" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo <span class="req">*</span></label>
+                        <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Ej. Alex Alania">
+                        <span class="error-msg" id="error-nombre"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico <span class="req">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com">
+                        <span class="error-msg" id="error-email"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefono">Teléfono / WhatsApp <span class="req">*</span></label>
+                        <input type="tel" id="telefono" name="telefono" required minlength="9" placeholder="987654321">
+                        <span class="error-msg" id="error-telefono"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Lugar de Entrega / Consulta <span class="req">*</span></label>
+                        <textarea id="mensaje" name="mensaje" rows="3" required minlength="10" placeholder="Ej. Quisiera información de entrega en Yanacancha..."></textarea>
+                        <span class="error-msg" id="error-mensaje"></span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" id="btn-submit">Enviar Consulta a Pasco <i class="fas fa-paper-plane"></i></button>
+                <div id="confirmation-message" class="confirm-box"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer"><p>&copy; 2026 TechNova Cerro de Pasco. Todos los derechos reservados.</p></footer>
+    <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="script.js"></script>
+</body>
+</html>
