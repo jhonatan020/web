@@ -1,0 +1,103 @@
+:root {
+    --bg-dark: #05020d;
+    --bg-card: rgba(15, 8, 35, 0.88);
+    --gold-primary: #ffd700;
+    --copper-primary: #d4af37;
+    --purple-magic: #a855f7;
+    --text-white: #ffffff;
+    --text-muted: #c0a5ff;
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
+    --transition: all 0.4s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: var(--bg-dark); color: var(--text-white); font-family: var(--font-body); line-height: 1.6; }
+
+/* BANDEROLA Y FONDO TEMÁTICO DE CERRO DE PASCO */
+.top-pasco-bar { background: linear-gradient(90deg, #b87333, #ffd700, #a855f7); color: #000; text-align: center; padding: 0.45rem 1rem; font-size: 0.85rem; font-weight: bold; }
+
+.magic-bg { 
+    position: fixed; 
+    inset: 0; 
+    pointer-events: none; 
+    z-index: -1; 
+}
+
+/* FONDO CON CAPA DE CERRO DE PASCO */
+.pasco-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(5, 2, 13, 0.85), rgba(5, 2, 13, 0.95)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RBHuERS7Vx-bmPxFSsBJs4HbS4Q2Qk0BjB1JWJNggPUgA-GxYvc1WWo&s=10') center/cover no-repeat;
+}
+
+.magic-orb { position: absolute; border-radius: 50%; filter: blur(140px); opacity: 0.35; }
+.orb-gold { width: 450px; height: 450px; background: var(--gold-primary); top: -100px; right: -50px; }
+.orb-purple { width: 500px; height: 500px; background: var(--purple-magic); bottom: -100px; left: -50px; }
+.orb-copper { width: 400px; height: 400px; background: #b87333; top: 30%; right: 10%; }
+
+/* HEADER & NAVBAR */
+.header { position: sticky; top: 0; z-index: 1000; padding: 1rem 2rem; background: rgba(5, 2, 13, 0.92); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 215, 0, 0.2); }
+.header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: #fff; font-size: 1.3rem; font-weight: bold; }
+.logo-icon { color: var(--gold-primary); }
+.copper-text { color: var(--gold-primary); text-shadow: 0 0 10px var(--gold-primary); }
+
+.navbar { display: flex; gap: 1.8rem; }
+.nav-link { color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: var(--transition); }
+.nav-link:hover, .nav-link.active { color: var(--gold-primary); text-shadow: 0 0 10px var(--gold-primary); }
+
+.menu-toggle { display: none; background: none; border: none; color: var(--gold-primary); font-size: 1.5rem; cursor: pointer; }
+
+/* HERO Y SECCIONES */
+.hero { text-align: center; padding: 5rem 1.5rem 3rem; }
+.magic-badge { display: inline-block; padding: 0.4rem 1.2rem; background: rgba(255, 215, 0, 0.15); border: 1px solid var(--gold-primary); border-radius: 50px; color: var(--gold-primary); font-size: 0.8rem; margin-bottom: 1.5rem; }
+.hero-title { font-size: clamp(2rem, 5vw, 3.8rem); margin-bottom: 1rem; }
+.gradient-copper { background: linear-gradient(135deg, #fff, var(--gold-primary), #b87333); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-sub { max-width: 650px; margin: 0 auto 2rem; color: var(--text-muted); }
+.hero-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+
+.btn { padding: 0.9rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 0.5rem; transition: var(--transition); border: none; cursor: pointer; }
+.btn-primary { background: linear-gradient(135deg, var(--gold-primary), #b87333); color: #000; box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+.btn-glass { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; }
+
+.services, .gallery, .contact { padding: 4rem 1.5rem; max-width: 1250px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 3rem; }
+.gold-tag { color: var(--gold-primary); font-size: 0.8rem; letter-spacing: 2px; }
+.sparkle-divider { width: 80px; height: 3px; background: var(--gold-primary); margin: 0.8rem auto 0; box-shadow: 0 0 10px var(--gold-primary); }
+
+.about-container, .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+.glass-card, .product-card { background: var(--bg-card); border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 16px; padding: 1.8rem; transition: var(--transition); }
+.glass-card:hover, .product-card:hover { transform: translateY(-5px); border-color: var(--gold-primary); box-shadow: 0 0 25px rgba(255, 215, 0, 0.3); }
+
+.icon-box { font-size: 2.2rem; color: var(--gold-primary); margin-bottom: 1rem; display: block; }
+.product-img-box { position: relative; height: 210px; overflow: hidden; border-radius: 10px; margin-bottom: 1rem; }
+.product-img-box img { width: 100%; height: 100%; object-fit: cover; }
+.price-badge { position: absolute; top: 10px; right: 10px; background: rgba(5, 2, 13, 0.9); border: 1px solid var(--gold-primary); color: var(--gold-primary); padding: 0.35rem 0.8rem; border-radius: 50px; font-weight: bold; font-size: 0.85rem; }
+
+.product-content { text-align: left; }
+.category { font-size: 0.75rem; color: var(--gold-primary); font-weight: bold; text-transform: uppercase; }
+.product-content h4 { font-size: 1.15rem; margin: 0.3rem 0; }
+.product-content p { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.2rem; }
+.btn-product { display: flex; justify-content: center; align-items: center; gap: 0.5rem; background: #25d366; color: #fff; padding: 0.75rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.85rem; }
+
+/* FORMULARIO */
+.contact-card-box { background: var(--bg-card); border: 1px solid rgba(255, 215, 0, 0.25); border-radius: 20px; padding: 2.5rem 1.5rem; }
+.contact-header { text-align: center; margin-bottom: 2rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.form-group label { display: block; color: var(--gold-primary); font-size: 0.8rem; margin-bottom: 0.3rem; font-weight: bold; }
+.magic-form input, .magic-form textarea { width: 100%; padding: 0.8rem; background: rgba(5, 2, 13, 0.8); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: #fff; }
+.error-msg { color: #ff453a; font-size: 0.75rem; display: block; margin-top: 0.2rem; }
+.btn-full { width: 100%; justify-content: center; margin-top: 1rem; }
+.confirm-box { margin-top: 1rem; padding: 0.8rem; border-radius: 8px; text-align: center; display: none; }
+.confirm-box.success { display: block; background: rgba(255, 215, 0, 0.2); border: 1px solid var(--gold-primary); color: var(--gold-primary); }
+
+.footer { text-align: center; padding: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.05); color: var(--text-muted); font-size: 0.85rem; }
+.back-to-top { position: fixed; bottom: 20px; right: 20px; width: 42px; height: 42px; background: var(--gold-primary); color: #000; border: none; border-radius: 50%; cursor: pointer; display: none; }
+
+@media (max-width: 768px) {
+    .form-row { grid-template-columns: 1fr; }
+    .navbar { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #05020d; padding: 1rem; border-bottom: 1px solid var(--gold-primary); }
+    .navbar.active { display: flex; }
+    .menu-toggle { display: block; }
+}
